@@ -41,8 +41,7 @@ public final class CustomerController {
         return "修改" + customerId + "手机号: " + phone;
     }
 
-    @ApiOperation(value = "删除")
-    @ApiImplicitParam(name = "customerId", paramType = "path", value = "Customer's id", required = true, dataTypeClass = Long.class)
+    @ApiOperation(value = "删除客户")
     @DeleteMapping("/customers/{customerId}")
     public String deleteCustomer(@PathVariable Long customerId) {
         return "删除用户: " + customerId;
